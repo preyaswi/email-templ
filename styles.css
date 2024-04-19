@@ -1,0 +1,128 @@
+/* Reset CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    font: small-caps bold 24px/1 Fantasy, 'Comic Sans MS', cursive; /* Adjust font */
+    font-weight: bolder; 
+    line-height: 1.6;
+    text-transform: uppercase; /* Apply capitalization to all text */
+}
+
+/* Specific exceptions for elements */
+.btn,
+.sailors-heading,
+.sailors-description p {
+    text-transform: uppercase; /* Override capitalization for specific elements */
+}
+
+header {
+    /* position: absolute; */
+    width: auto;
+    text-align: center;
+    z-index: 1001; /* Ensure the header is above the fixed logo */
+}
+.logo {
+    width: calc(33.33vw);/* Set the width to one-third of the viewport width */
+    height: auto; /* Set the height as needed */
+    /* position: fixed; */
+    top: 0;
+    left: 10%;
+    /* transform: translateX(-50%); */
+    z-index: 1000;
+    background-size: cover;
+    background-color: #333;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color */
+    font-size: 24px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 600px;
+    margin: 120px auto 0;
+    margin-top: 0%;
+    padding: 20px;
+    background-color:lightgreen;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Add relative positioning to contain the absolute positioned header */
+}
+
+/* Header */
+.header img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Line between sections */
+.line {
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+}
+
+/* Newbie and Experienced sections */
+.sailors-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sailors-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sailors-description {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(221, 104, 121);
+    color: rgb(228, 197, 197);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase; /* Apply capitalization */
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(221, 104, 121);
+}
+
+.arrow {
+    margin: 0 5px;
+}
+/* Your existing CSS styles */
+
+/* New CSS for animation */
+@keyframes moveSmall {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes moveBig {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-100px); }
+    100% { transform: translateX(0); }
+}
